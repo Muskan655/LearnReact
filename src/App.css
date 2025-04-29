@@ -36,3 +36,82 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  color: white;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: backgroundAnimation 5s infinite alternate; 
+}
+
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+
+.loading, .error {
+  font-size: 20px;
+  color: #ffcc00; 
+  margin-top: 50px;
+}
+
+.error {
+  color: red;
+}
+
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; 
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+  100% {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 15px;
+    width: 90%;
+  }
+}
